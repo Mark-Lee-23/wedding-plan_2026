@@ -1,0 +1,1840 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>결혼 준비 마스터플랜 — 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=DM+Mono:wght@400;500&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1a1814;
+  --paper: #f7f4ef;
+  --paper2: #f0ece4;
+  --gold: #c9993a;
+  --gold-light: #e8c97a;
+  --red: #c0392b;
+  --green: #2d6a2d;
+  --blue: #1a4a7a;
+  --amber: #8a5c0a;
+  --muted: #7a7468;
+  --border: #d8d0c4;
+  --border2: #c8bfb0;
+  --done-bg: #edf5ed;
+  --progress-bg: #fdf6e6;
+  --todo-bg: #fdf0f0;
+  --serif: 'Noto Serif KR', serif;
+  --sans: 'Noto Sans KR', sans-serif;
+  --mono: 'DM Mono', monospace;
+  --shadow: 0 2px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 6px 32px rgba(0,0,0,0.12);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* HEADER */
+.site-header {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 2px solid var(--gold);
+}
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+}
+.header-title {
+  font-family: var(--serif);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--gold-light);
+  letter-spacing: 0.02em;
+}
+.header-date {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: #999;
+}
+.nav-tabs {
+  display: flex;
+  gap: 0;
+  background: var(--ink);
+  overflow-x: auto;
+  border-bottom: 1px solid #333;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.nav-tab {
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #999;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  white-space: nowrap;
+  letter-spacing: 0.03em;
+}
+.nav-tab:hover { color: var(--gold-light); }
+.nav-tab.active { color: var(--gold-light); border-bottom-color: var(--gold); }
+
+/* MAIN LAYOUT */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px 80px; }
+
+/* HERO */
+.hero {
+  padding: 48px 0 32px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 40px;
+}
+.hero-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.hero-title {
+  font-family: var(--serif);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  color: var(--ink);
+}
+.hero-title span { color: var(--gold); }
+.hero-kpis {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-top: 24px;
+}
+.kpi-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  position: relative;
+  overflow: hidden;
+}
+.kpi-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+}
+.kpi-card.red::before { background: var(--red); }
+.kpi-card.gold::before { background: var(--gold); }
+.kpi-card.green::before { background: var(--green); }
+.kpi-card.blue::before { background: var(--blue); }
+.kpi-card.amber::before { background: var(--amber); }
+.kpi-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+.kpi-value { font-family: var(--serif); font-size: 20px; font-weight: 700; line-height: 1.2; }
+.kpi-value.red { color: var(--red); }
+.kpi-value.gold { color: var(--gold); }
+.kpi-value.green { color: var(--green); }
+.kpi-value.blue { color: var(--blue); }
+.kpi-sub { font-size: 10px; color: var(--muted); margin-top: 3px; }
+
+/* SECTION */
+.section { margin-bottom: 64px; }
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--ink);
+}
+.section-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+}
+.section-title {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 700;
+}
+.section-badge {
+  font-size: 10px;
+  padding: 3px 9px;
+  border-radius: 20px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-left: auto;
+}
+.badge-urgent { background: #fdecec; color: var(--red); border: 1px solid #f5c6c6; }
+.badge-active { background: var(--progress-bg); color: var(--amber); border: 1px solid #f0d78a; }
+.badge-plan { background: #e8f0fb; color: var(--blue); border: 1px solid #b8cff0; }
+.badge-ok { background: var(--done-bg); color: var(--green); border: 1px solid #b8dbb8; }
+
+/* TODO CARDS */
+.todo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.todo-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+.todo-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.2s;
+}
+.todo-card:hover { box-shadow: var(--shadow-lg); }
+.todo-card-head {
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.todo-icon { font-size: 18px; }
+.todo-card-title { font-size: 13px; font-weight: 700; flex: 1; }
+.todo-card-body { padding: 14px 18px; }
+.todo-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: background 0.15s;
+  border-radius: 4px;
+  padding: 8px 6px;
+}
+.todo-item:last-child { border-bottom: none; }
+.todo-item:hover { background: var(--paper2); }
+.todo-check {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--border2);
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.todo-item.done .todo-check {
+  background: var(--green);
+  border-color: var(--green);
+  color: white;
+}
+.todo-item.done .todo-check::after { content: '✓'; font-size: 11px; }
+.todo-item.done .todo-text { text-decoration: line-through; color: var(--muted); }
+.todo-text { flex: 1; font-size: 12.5px; line-height: 1.5; }
+.todo-text .sub { display: block; font-size: 11px; color: var(--muted); margin-top: 2px; }
+.todo-deadline {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--muted);
+  white-space: nowrap;
+  padding: 2px 7px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+.todo-deadline.urgent { color: var(--red); border-color: #f5c6c6; background: #fef8f8; }
+.todo-deadline.active { color: var(--amber); border-color: #f0d78a; background: #fdf9ee; }
+
+/* FULL WIDTH CARD */
+.full-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin-bottom: 16px;
+}
+.full-card-head {
+  padding: 14px 20px;
+  background: var(--paper2);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.full-card-title { font-size: 13px; font-weight: 700; }
+.full-card-body { padding: 16px 20px; }
+
+/* TABLE */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+}
+.data-table th {
+  font-size: 10px;
+  color: var(--muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  background: var(--paper2);
+}
+.data-table th:not(:first-child) { text-align: right; }
+.data-table td {
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+.data-table td:not(:first-child) { text-align: right; }
+.data-table tr:last-child td { border-bottom: none; }
+.data-table tfoot td {
+  font-weight: 700;
+  background: var(--paper2);
+  border-top: 2px solid var(--border2);
+}
+.data-table .highlight-row { background: #fef9f0; }
+.tag {
+  display: inline-block;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+.tag-red { background: #fdecec; color: var(--red); }
+.tag-green { background: var(--done-bg); color: var(--green); }
+.tag-amber { background: #fdf0d8; color: var(--amber); }
+.tag-blue { background: #e8f0fb; color: var(--blue); }
+.tag-gold { background: #fdf5e0; color: #8a6020; }
+.tag-gray { background: #f0ece8; color: var(--muted); }
+
+/* TIMELINE */
+.timeline { position: relative; padding-left: 32px; }
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 10px; top: 8px; bottom: 8px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--gold), var(--border));
+}
+.tl-item {
+  position: relative;
+  margin-bottom: 24px;
+}
+.tl-item::before {
+  content: '';
+  position: absolute;
+  left: -26px;
+  top: 5px;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px var(--gold);
+  background: var(--gold);
+}
+.tl-item.completed::before { background: var(--green); box-shadow: 0 0 0 2px var(--green); }
+.tl-item.urgent::before { background: var(--red); box-shadow: 0 0 0 2px var(--red); }
+.tl-item.future::before { background: var(--paper); box-shadow: 0 0 0 2px var(--border2); }
+.tl-date {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.tl-date.completed { color: var(--green); }
+.tl-date.urgent { color: var(--red); }
+.tl-date.future { color: var(--muted); }
+.tl-title { font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+.tl-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+.tl-amount { font-family: var(--serif); font-size: 15px; font-weight: 700; margin-top: 4px; }
+.tl-amount.expense { color: var(--red); }
+.tl-amount.income { color: var(--green); }
+
+/* MONTH CARDS */
+.month-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.month-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.month-head {
+  padding: 12px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+}
+.month-head.danger { background: #fdf0f0; color: var(--red); }
+.month-head.warn { background: #fdf8ee; color: var(--amber); }
+.month-head.ok { background: #eef6ee; color: var(--green); }
+.month-head.info { background: #eef3fb; color: var(--blue); }
+.month-body { padding: 12px 16px; font-size: 12px; line-height: 1.8; background: white; }
+.month-row { display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding: 3px 0; }
+.month-row:last-child { border-bottom: none; }
+.month-row .lbl { color: var(--muted); }
+.month-row.inc { color: var(--green); }
+.month-row.exp { color: var(--red); }
+.month-row.stk { color: var(--blue); }
+.month-row.bal { font-weight: 700; margin-top: 4px; padding-top: 6px; border-top: 1px solid var(--border2); border-bottom: none; }
+.month-row.bal.pos { color: var(--green); }
+.month-row.bal.neg { color: var(--red); }
+
+/* HOTEL TABLE */
+.hotel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.hotel-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  background: white;
+  font-size: 12.5px;
+}
+.hotel-name { font-weight: 700; font-size: 13px; margin-bottom: 4px; }
+.hotel-area { font-size: 11px; color: var(--gold); font-family: var(--mono); margin-bottom: 6px; }
+.hotel-detail { color: var(--muted); font-size: 11px; line-height: 1.6; }
+.hotel-price { font-family: var(--serif); font-size: 16px; font-weight: 700; color: var(--blue); margin-top: 6px; }
+
+/* INFO BOX */
+.info-box {
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 12px;
+  line-height: 1.65;
+  margin: 12px 0;
+}
+.info-box.warn { background: #fdf8ee; border: 1px solid #f0d78a; color: var(--amber); }
+.info-box.info { background: #eef3fb; border: 1px solid #b8cff0; color: var(--blue); }
+.info-box.ok { background: var(--done-bg); border: 1px solid #b8dbb8; color: var(--green); }
+.info-box.tip { background: #fdf5e0; border: 1px solid #e8c97a; color: #7a5c0a; }
+
+/* PROGRESS BAR */
+.progress-container { margin: 6px 0 2px; }
+.progress-bar {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--border);
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  border-radius: 3px;
+  background: var(--gold);
+  transition: width 0.8s ease;
+}
+
+/* PRINT BUTTON */
+.print-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  background: var(--ink);
+  color: var(--gold-light);
+  border: 1px solid var(--gold);
+  border-radius: 50px;
+  padding: 12px 22px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  box-shadow: var(--shadow-lg);
+  z-index: 200;
+  transition: all 0.2s;
+}
+.print-btn:hover { background: #333; transform: translateY(-2px); }
+
+/* MOBILE TOUCH */
+@media (hover: none) {
+  .todo-item { min-height: 48px; padding: 10px 8px; }
+  .todo-check { width: 22px; height: 22px; border-radius: 6px; }
+  .todo-item.done .todo-check::after { font-size: 13px; }
+  .nav-tab { padding: 12px 16px; font-size: 12px; }
+  .print-btn { bottom: 20px; right: 16px; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero-kpis { grid-template-columns: repeat(2, 1fr); }
+  .todo-grid, .todo-grid-3, .month-grid, .hotel-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .hero-title { font-size: 24px; }
+  .nav-tab { padding: 10px 14px; font-size: 11px; }
+  .hero-kpis { grid-template-columns: 1fr 1fr; }
+  .data-table { font-size: 11.5px; }
+  .data-table th, .data-table td { padding: 7px 8px; }
+  .container { padding: 0 16px 80px; }
+  .section-title { font-size: 19px; }
+  .full-card-body { padding: 12px 14px; }
+}
+
+/* PAGE SECTIONS (for nav) */
+.page-section { display: block; }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-title">🏠 결혼 준비 마스터플랜 · 중계건영2차 906호</div>
+    <div class="header-date">Last updated: 2026.04.08</div>
+  </div>
+  <nav>
+    <div class="nav-tabs" id="mainNav">
+      <div class="nav-tab active" onclick="scrollToSection('overview')">전체 요약</div>
+      <div class="nav-tab" onclick="scrollToSection('interior')">인테리어</div>
+      <div class="nav-tab" onclick="scrollToSection('appliances')">가전·가구</div>
+      <div class="nav-tab" onclick="scrollToSection('honeymoon')">신혼여행</div>
+      <div class="nav-tab" onclick="scrollToSection('moving')">이사 계획</div>
+      <div class="nav-tab" onclick="scrollToSection('finance')">자금 계획</div>
+    </div>
+  </nav>
+</header>
+
+<div class="container">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-label">Master Plan · Apr 8 → Jul 11, 2026</div>
+  <h1 class="hero-title">결혼까지 <span>94일</span>,<br>남은 준비를 완성하자.</h1>
+  <div class="hero-kpis">
+    <div class="kpi-card red">
+      <div class="kpi-label">4/24 잔금 D-day</div>
+      <div class="kpi-value red">7,323만원</div>
+      <div class="kpi-sub">D-16</div>
+    </div>
+    <div class="kpi-card gold">
+      <div class="kpi-label">인테리어 잔여 납부</div>
+      <div class="kpi-value gold">4,600만원</div>
+      <div class="kpi-sub">계약금 400만 기납부</div>
+    </div>
+    <div class="kpi-card amber">
+      <div class="kpi-label">취득세 (6월)</div>
+      <div class="kpi-value" style="color:var(--amber)">2,025만원</div>
+      <div class="kpi-sub">전용 84㎡ · 생애최초 감면</div>
+    </div>
+    <div class="kpi-card blue">
+      <div class="kpi-label">가전·가구 예상 비용</div>
+      <div class="kpi-value blue">약 750~960만원</div>
+      <div class="kpi-sub">처형 부담 제외 기준</div>
+    </div>
+    <div class="kpi-card green">
+      <div class="kpi-label">신혼여행 (7/13~7/24)</div>
+      <div class="kpi-value green">약 600~850만원</div>
+      <div class="kpi-sub">바르셀로나 + 마요르카 12일</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== SECTION 1: OVERVIEW ===== -->
+<div class="section page-section" id="overview">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <h2 class="section-title">전체 일정 타임라인</h2>
+    <span class="section-badge badge-urgent">D-16 잔금 임박</span>
+  </div>
+
+  <div class="timeline">
+    <div class="tl-item completed">
+      <div class="tl-date completed">완료</div>
+      <div class="tl-title">한화오션 전량 + SPY 16주 매도 완료</div>
+      <div class="tl-desc">원화 5,597만원 확보. 달러 $10,760 잔여.</div>
+    </div>
+    <div class="tl-item urgent">
+      <div class="tl-date urgent">4월 8일 (오늘) ★</div>
+      <div class="tl-title">달러 $10,760 즉시 환전</div>
+      <div class="tl-desc">1,500원 기준 약 1,614만원 추가 확보. 잔금 부족분 1,726만원 중 1,614만원 해결.</div>
+      <div class="tl-amount income">+1,614만원</div>
+    </div>
+    <div class="tl-item urgent">
+      <div class="tl-date urgent">4월 14~17일 ★ 미국주식 데드라인</div>
+      <div class="tl-title">SPY 1주 매도 → 잔금 완전 확보</div>
+      <div class="tl-desc">잔여 부족분 약 112만원. SPY 1주(약 102만원) 매도로 해결. T+1 결제로 4/24 전 원화 확보 필수.</div>
+      <div class="tl-amount expense">-확보: +102만원</div>
+    </div>
+    <div class="tl-item urgent">
+      <div class="tl-date urgent">4월 17일 (금)</div>
+      <div class="tl-title">이사 — 희원 짐 빼고 단기임대 입주</div>
+      <div class="tl-desc">이사비 260만원 + 단기임대 210만원 = 470만원 지출.</div>
+      <div class="tl-amount expense">-470만원</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">4월 24일 (목) 🔑 잔금일</div>
+      <div class="tl-title">중계건영2차 906호 잔금 납부 + 등기</div>
+      <div class="tl-desc">잔금 6,900만 + 중개 328만 + 법무/인지 95만 = 총 7,323만원. 25일 월급 수령로 이후 안정화.</div>
+      <div class="tl-amount expense">-7,323만원</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">4월 24일 이후</div>
+      <div class="tl-title">신혼집 실내 실측 (84㎡ 전용)</div>
+      <div class="tl-desc">각 방·주방·욕실 실측 → 가전·가구 구매 사이즈 확정. 가능하면 인테리어 업체 동행 실측 권장.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">4월 27일</div>
+      <div class="tl-title">인테리어 1차 납부</div>
+      <div class="tl-amount expense">-800만원</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">4월 28일 ~ 5월 1일</div>
+      <div class="tl-title">SPY 잔여 16.4주 전량 매도</div>
+      <div class="tl-desc">5월 인테리어 집중 납부 대비 현금화.</div>
+      <div class="tl-amount income">+1,667만원</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">4월 29일 (AMD 실적 전후)</div>
+      <div class="tl-title">AMD 약 40주 매도</div>
+      <div class="tl-desc">실적 발표 결과 보고 전후 결정. 잔여 5.6주 유지.</div>
+      <div class="tl-amount income">+1,385만원</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">5월 4일 ~ 5월 22일</div>
+      <div class="tl-title">인테리어 2~5차 납부</div>
+      <div class="tl-desc">5/4 800만, 5/11 800만, 5/15 700만, 5/22 700만</div>
+      <div class="tl-amount expense">-3,000만원</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">5월 중</div>
+      <div class="tl-title">가전·가구 구매 (본인 부담분)</div>
+      <div class="tl-desc">식기세척기·정수기·인덕션·광파오븐 + 소파·식탁 세트</div>
+      <div class="tl-amount expense">-약 600만원</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">5월 11일 (PLTR 실적발표)</div>
+      <div class="tl-title">팔란티어 보유 재검토</div>
+      <div class="tl-desc">실적 확인 후 보유 or 침대·매트리스 비용으로 활용 결정.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">6월 초</div>
+      <div class="tl-title">회사 주택대출 5,000만원 수령</div>
+      <div class="tl-amount income">+5,000만원</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">6월 중 (D+60일 이내, 6/23 데드라인)</div>
+      <div class="tl-title">취득세 납부 (wetax.go.kr)</div>
+      <div class="tl-desc">전용 84㎡ 기준. 취득세 2,023만 + 지방교육세 202만 - 생애최초 감면 200만 = 2,025만원.</div>
+      <div class="tl-amount expense">-2,025만원</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">6월 말</div>
+      <div class="tl-title">인테리어 잔금 납부 + 신혼집 입주</div>
+      <div class="tl-amount expense">-800만원</div>
+    </div>
+    <div class="tl-item future">
+      <div class="tl-date future">7월 13일 ~ 7월 24일</div>
+      <div class="tl-title">신혼여행 — 바르셀로나 + 마요르카</div>
+      <div class="tl-desc">바르셀로나 5일 + 마요르카 7일. 항공+숙박+렌트카+티켓.</div>
+      <div class="tl-amount expense">-약 600~850만원</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== SECTION 2: INTERIOR ===== -->
+<div class="section page-section" id="interior">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <h2 class="section-title">인테리어 관련 TODO</h2>
+    <span class="section-badge badge-active">진행중</span>
+  </div>
+
+  <!-- 욕실 도기 -->
+  <div class="full-card" style="margin-bottom:20px;">
+    <div class="full-card-head">
+      <span>🚿</span>
+      <div class="full-card-title">American Standard 욕실 도기 — 가격 조사</div>
+      <span class="tag tag-blue" style="margin-left:auto;">구매처: kkokjimall.com · bathm.kr · ian-mall.kr</span>
+    </div>
+    <div class="full-card-body">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>품목</th>
+            <th>제품명/모델</th>
+            <th>가격대</th>
+            <th>특이사항</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="highlight-row">
+            <td><strong>비데일체형 변기 (기본)</strong></td>
+            <td>PLAT 플랫 기본 직수형 (C831000E/C360000B)</td>
+            <td style="color:var(--blue)"><strong>약 100~130만원</strong></td>
+            <td><span class="tag tag-amber">기본 비데</span></td>
+          </tr>
+          <tr>
+            <td><strong>비데일체형 변기 (자동개폐)</strong></td>
+            <td>PLAT 기본 자동개폐 직수형 (C831200E)</td>
+            <td style="color:var(--blue)"><strong>약 130~160만원</strong></td>
+            <td><span class="tag tag-amber">자동개폐</span></td>
+          </tr>
+          <tr class="highlight-row">
+            <td><strong>비데일체형 변기 (아쿠아세라믹)</strong></td>
+            <td>PLAT AQUA 아쿠아세라믹 자동개폐 직수형</td>
+            <td style="color:var(--blue)"><strong>약 150~190만원</strong></td>
+            <td><span class="tag tag-gold">아쿠아세라믹 코팅 ★추천</span></td>
+          </tr>
+          <tr>
+            <td><strong>비데일체형 변기 (고급형·블랙)</strong></td>
+            <td>PLAT AQUA 블랙 자동개폐+음향 (8312/3600)</td>
+            <td style="color:var(--red)"><strong>약 247만원</strong></td>
+            <td><span class="tag tag-red">음향재생 포함</span></td>
+          </tr>
+          <tr class="highlight-row">
+            <td><strong>비데일체형 변기 (라운드형)</strong></td>
+            <td>PLAT ROUND 플랫라운드 자동개폐 직수형</td>
+            <td style="color:var(--blue)"><strong>약 160~220만원</strong></td>
+            <td><span class="tag tag-amber">라운드 디자인</span></td>
+          </tr>
+          <tr>
+            <td><strong>반다리 세면기</strong></td>
+            <td>플랫내츄럴R / 웨이브라운드 아쿠아세라믹</td>
+            <td style="color:var(--blue)"><strong>약 30~60만원</strong></td>
+            <td><span class="tag tag-gray">화장실 1개소 기준</span></td>
+          </tr>
+          <tr class="highlight-row">
+            <td><strong>세면 수전 (원홀)</strong></td>
+            <td>플랫라운드 원홀 세면수전 (FA1673S)</td>
+            <td style="color:var(--blue)"><strong>약 19~25만원</strong></td>
+            <td><span class="tag tag-gray">니켈/크롬</span></td>
+          </tr>
+          <tr>
+            <td><strong>레인샤워수전 (선반형)</strong></td>
+            <td>플랫 선반형 2기능 해바라기 (FC5780)</td>
+            <td style="color:var(--blue)"><strong>약 25~60만원</strong></td>
+            <td><span class="tag tag-gray">선반형 기본</span></td>
+          </tr>
+          <tr>
+            <td><strong>레인샤워수전 (3기능 해바라기)</strong></td>
+            <td>플랫라운드 3기능 해바라기 (FB5784)</td>
+            <td style="color:var(--blue)"><strong>약 55~90만원</strong></td>
+            <td><span class="tag tag-gold">★고급형</span></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td><strong>욕실 1개소 총계 (중급 기준)</strong></td>
+            <td></td>
+            <td style="color:var(--red)"><strong>약 250~400만원/개소</strong></td>
+            <td>화장실 개수 × 필요</td>
+          </tr>
+        </tfoot>
+      </table>
+      <div class="info-box tip" style="margin-top:12px;">
+        💡 <strong>추천 조합 (중급, 욕실 1개소 기준):</strong> PLAT AQUA 자동개폐 변기(160만) + 반다리 세면기(45만) + 원홀 수전(22만) + 플랫 선반형 레인샤워(45만) = <strong>약 270만원</strong><br>
+        욕실이 2개소라면 × 2 적용 필요. 구매처: <strong>꼭지몰, 바스미디아, 이안몰</strong> 가격 비교 후 구매 권장.
+      </div>
+    </div>
+  </div>
+
+  <!-- 실측 todo -->
+  <div class="todo-grid">
+    <div class="todo-card">
+      <div class="todo-card-head" style="background:#fdf0f0;">
+        <span class="todo-icon">📐</span>
+        <div class="todo-card-title">잔금 후 실내 실측</div>
+        <span class="tag tag-red">4/24 이후</span>
+      </div>
+      <div class="todo-card-body">
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">각 방 실측 (안방, 작은방)
+            <span class="sub">침대·옷장·화장대 배치 위한 cm 단위 실측</span>
+          </div>
+          <span class="todo-deadline urgent">4/25~27</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">주방 실측 (냉장고·식기세척기·인덕션 위치)
+            <span class="sub">냉장고 폭, 빌트인 공간 치수 확인</span>
+          </div>
+          <span class="todo-deadline urgent">4/25~27</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">욕실 1·2 실측 (변기, 세면대, 샤워부스)
+            <span class="sub">AS 도기 주문 전 치수 필수 확인</span>
+          </div>
+          <span class="todo-deadline urgent">4/25~27</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">거실 실측 (소파, TV장, 식탁 배치)
+            <span class="sub">소파 L형 or 직선형 검토</span>
+          </div>
+          <span class="todo-deadline">4/25~27</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">인테리어 업체와 동행 실측 일정 잡기
+            <span class="sub">욕실 도기 발주 전 업체와 치수 확인 필수</span>
+          </div>
+          <span class="todo-deadline">4/24 직후</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="todo-card">
+      <div class="todo-card-head" style="background:#fdf8ee;">
+        <span class="todo-icon">🚿</span>
+        <div class="todo-card-title">욕실 도기 결정 & 발주</div>
+        <span class="tag tag-amber">5월 중</span>
+      </div>
+      <div class="todo-card-body">
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">비데일체형 변기 모델 최종 선택
+            <span class="sub">PLAT AQUA 아쿠아세라믹 자동개폐 권장 (150~190만)</span>
+          </div>
+          <span class="todo-deadline active">5월 초</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">세면기 + 수전 선택 (플랫라운드 시리즈)
+            <span class="sub">반다리 세면기 + 원홀 수전 조합 검토</span>
+          </div>
+          <span class="todo-deadline active">5월 초</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">레인샤워수전 선택 (선반형 or 해바라기형)
+            <span class="sub">FC5780 선반형 기본 (25~60만) vs FB5784 3기능 (55~90만)</span>
+          </div>
+          <span class="todo-deadline active">5월 초</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">욕실 선반·거울·수납장 결정
+            <span class="sub">인테리어 업체와 협의 or 별도 구매</span>
+          </div>
+          <span class="todo-deadline">5월 중</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">꼭지몰·바스미디아·이안몰 가격 비교 후 발주
+            <span class="sub">서울·경기 무료배송·설치 조건 확인</span>
+          </div>
+          <span class="todo-deadline">5월 중</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== SECTION 3: APPLIANCES ===== -->
+<div class="section page-section" id="appliances">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <h2 class="section-title">가전·가구 구매 TODO</h2>
+    <span class="section-badge badge-active">5~6월 실행</span>
+  </div>
+
+  <!-- 가전 테이블 -->
+  <div class="full-card" style="margin-bottom:20px;">
+    <div class="full-card-head">
+      <span>🏠</span>
+      <div class="full-card-title">가전 구매 계획 — 참고 사이즈 포함</div>
+    </div>
+    <div class="full-card-body">
+      <table class="data-table">
+        <thead>
+          <tr><th>품목</th><th>참고 제품/스펙</th><th>일반 사이즈 (W×D×H)</th><th>예산</th><th>부담</th></tr>
+        </thead>
+        <tbody>
+          <tr style="background:#fef9f8;">
+            <td>냉장고 (양문형/4도어)</td>
+            <td>삼성 비스포크 or LG 오브제</td>
+            <td style="font-family:var(--mono);font-size:11px;">850~910 × 710~740 × 1780~1850mm</td>
+            <td>약 200~350만원</td>
+            <td><span class="tag tag-gold">처형 부담</span></td>
+          </tr>
+          <tr style="background:#fef9f8;">
+            <td>김치냉장고</td>
+            <td>삼성 비스포크 RQ32 or LG 디오스</td>
+            <td style="font-family:var(--mono);font-size:11px;">595 × 695 × 1850mm (스탠드)</td>
+            <td>약 120~180만원</td>
+            <td><span class="tag tag-gold">처형 부담</span></td>
+          </tr>
+          <tr style="background:#fef9f8;">
+            <td>로봇청소기</td>
+            <td>삼성 비스포크 제트봇 AI or 로보락 S8</td>
+            <td style="font-family:var(--mono);font-size:11px;">도킹스테이션: 약 350×350×500mm</td>
+            <td>약 60~100만원</td>
+            <td><span class="tag tag-gold">처형 부담</span></td>
+          </tr>
+          <tr>
+            <td><strong>식기세척기</strong></td>
+            <td>삼성 DW60BG8700SGSP or LG DIOS</td>
+            <td style="font-family:var(--mono);font-size:11px;">598 × 550 × 815mm (빌트인)</td>
+            <td style="color:var(--red)"><strong>약 70~90만원</strong></td>
+            <td><span class="tag tag-red">본인 부담</span></td>
+          </tr>
+          <tr>
+            <td><strong>직수정수기</strong></td>
+            <td>코웨이/청호 직수형 or 렌탈</td>
+            <td style="font-family:var(--mono);font-size:11px;">300 × 400 × 450mm (카운터탑)</td>
+            <td style="color:var(--red)"><strong>약 50~70만원</strong><br><span style="font-size:11px;color:var(--muted)">렌탈: 월 2~3만</span></td>
+            <td><span class="tag tag-red">본인 부담</span></td>
+          </tr>
+          <tr>
+            <td><strong>인덕션</strong></td>
+            <td>삼성 2구 or LG 인덕션 (빌트인)</td>
+            <td style="font-family:var(--mono);font-size:11px;">590 × 520 × 55mm (빌트인 기준)</td>
+            <td style="color:var(--red)"><strong>약 70~100만원</strong></td>
+            <td><span class="tag tag-red">본인 부담</span></td>
+          </tr>
+          <tr>
+            <td><strong>광파오븐</strong></td>
+            <td>삼성 오너쉐프 or LG 광파오븐</td>
+            <td style="font-family:var(--mono);font-size:11px;">595 × 560 × 450mm</td>
+            <td style="color:var(--red)"><strong>약 40~60만원</strong></td>
+            <td><span class="tag tag-red">본인 부담</span></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td><strong>본인 부담 소계</strong></td>
+            <td colspan="2"></td>
+            <td style="color:var(--red)"><strong>약 230~320만원</strong></td>
+            <td></td>
+          </tr>
+        </tfoot>
+      </table>
+      <div class="info-box warn" style="margin-top:12px;">
+        ⚠️ <strong>실측 후 구매:</strong> 냉장고 니치(벽면 공간), 식기세척기·인덕션 빌트인 공간은 반드시 4/24 실측 후 치수 확인하고 발주. 주방 캐비닛 오픈 공간과 실제 제품 폭 1~2cm 여유 확인 필수.
+      </div>
+    </div>
+  </div>
+
+  <!-- 가구 테이블 -->
+  <div class="full-card" style="margin-bottom:20px;">
+    <div class="full-card-head">
+      <span>🛋️</span>
+      <div class="full-card-title">가구 구매 계획 — 참고 사이즈 포함</div>
+    </div>
+    <div class="full-card-body">
+      <table class="data-table">
+        <thead>
+          <tr><th>품목</th><th>스펙 / 브랜드</th><th>참고 사이즈</th><th>가격 범위</th><th>추천 예산</th></tr>
+        </thead>
+        <tbody>
+          <tr class="highlight-row">
+            <td><strong>소파</strong></td>
+            <td>확인된 견적 (3인 직선형)</td>
+            <td style="font-family:var(--mono);font-size:11px;">W2200 × D950 × H850mm</td>
+            <td>확정 견적</td>
+            <td style="color:var(--red)"><strong>250만원</strong></td>
+          </tr>
+          <tr>
+            <td><strong>포쉐린 세라믹 4인 식탁+의자</strong></td>
+            <td>라로퍼니처·보니애·삼익가구<br><span style="font-size:11px;color:var(--muted)">포세린 통세라믹 1400×800</span></td>
+            <td style="font-family:var(--mono);font-size:11px;">W1400 × D800 × H740mm</td>
+            <td>20~100만원</td>
+            <td style="color:var(--red)"><strong>50~80만원</strong></td>
+          </tr>
+          <tr class="highlight-row">
+            <td><strong>라지킹 침대 프레임</strong></td>
+            <td>수납형·LED 조명형<br><span style="font-size:11px;color:var(--muted)">LK 사이즈 (180×200cm)</span></td>
+            <td style="font-family:var(--mono);font-size:11px;">W2010 × D2180 × H1000mm</td>
+            <td>50~170만원</td>
+            <td style="color:var(--red)"><strong>80~130만원</strong></td>
+          </tr>
+          <tr>
+            <td><strong>라지킹 매트리스</strong></td>
+            <td>에이스·시몬스 (독립스프링/하이브리드)</td>
+            <td style="font-family:var(--mono);font-size:11px;">W1800 × L2000 × H250~350mm</td>
+            <td>60~300만원+</td>
+            <td style="color:var(--red)"><strong>100~200만원</strong></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td><strong>가구 합계</strong></td>
+            <td colspan="3"></td>
+            <td style="color:var(--red)"><strong>약 480~660만원</strong></td>
+          </tr>
+        </tfoot>
+      </table>
+      <div class="info-box tip">
+        💡 <strong>침대·매트리스 쇼룸 방문 필수:</strong> 매트리스는 신혼부부 두 분이 함께 누워보고 결정하는 것이 가장 중요. 에이스침대몰·시몬스·리바트 웨딩 프로모션 확인. 팔란티어 5/11 실적 후 매도분으로 충당 가능.
+      </div>
+    </div>
+  </div>
+
+  <div class="todo-grid">
+    <div class="todo-card">
+      <div class="todo-card-head" style="background:#fdf8ee;">
+        <span class="todo-icon">🛒</span>
+        <div class="todo-card-title">가전 구매 체크리스트</div>
+      </div>
+      <div class="todo-card-body">
+        <div class="todo-item done" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">냉장고·김치냉장고·로봇청소기 (처형 담당)
+            <span class="sub">처형께서 구매 예정 — 협의 완료</span>
+          </div>
+          <span class="todo-deadline">담당: 처형</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">식기세척기 구매 (빌트인 공간 실측 후)
+            <span class="sub">삼성 DW60BG8700 or LG 13인용 — 약 70~90만원</span>
+          </div>
+          <span class="todo-deadline active">5월 중</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">직수정수기 구매 or 렌탈 결정
+            <span class="sub">초기비용 부담 시 코웨이 렌탈(월 2~3만원) 대안</span>
+          </div>
+          <span class="todo-deadline active">5월 중</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">인덕션 구매 (빌트인 vs 스탠드형)
+            <span class="sub">삼성 NZ63T3706EK or LG BEY3GQ3ST — 약 70~100만원</span>
+          </div>
+          <span class="todo-deadline active">5월 중</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">광파오븐 구매
+            <span class="sub">삼성 MC35R8058CW or LG MJEN286SF — 약 40~60만원</span>
+          </div>
+          <span class="todo-deadline active">5월 중</span>
+        </div>
+      </div>
+    </div>
+    <div class="todo-card">
+      <div class="todo-card-head" style="background:#fdf8ee;">
+        <span class="todo-icon">🛏️</span>
+        <div class="todo-card-title">가구 구매 체크리스트</div>
+      </div>
+      <div class="todo-card-body">
+        <div class="todo-item done" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">소파 견적 확인 완료 (250만원)
+            <span class="sub">업체 확정 → 납부 일정 조율 필요</span>
+          </div>
+          <span class="todo-deadline">견적 완료</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">포쉐린 세라믹 4인 식탁 최종 선택
+            <span class="sub">라로퍼니처·보니애·삼익 비교. 1400×800cm 권장. 50~80만원</span>
+          </div>
+          <span class="todo-deadline active">5월 초</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">침대 프레임 쇼룸 방문 후 결정
+            <span class="sub">라지킹(LK) 수납형. 실제 안방 사이즈와 매칭 확인</span>
+          </div>
+          <span class="todo-deadline active">5~6월</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">매트리스 쇼룸 방문 (에이스·시몬스)
+            <span class="sub">두 분이 함께 직접 테스트. 100~200만원 예산</span>
+          </div>
+          <span class="todo-deadline active">5~6월</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">웨딩 프로모션 확인 (가전·가구 패키지)
+            <span class="sub">삼성·LG 웨딩스토어, 현대리바트 웨딩 프로모션</span>
+          </div>
+          <span class="todo-deadline">5월 중</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== SECTION 4: HONEYMOON ===== -->
+<div class="section page-section" id="honeymoon">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <h2 class="section-title">신혼여행 — 바르셀로나 + 마요르카</h2>
+    <span class="section-badge badge-plan">7/13~7/24 · 12일</span>
+  </div>
+
+  <!-- 일정 개요 -->
+  <div class="full-card" style="margin-bottom:16px;">
+    <div class="full-card-head">
+      <span>✈️</span>
+      <div class="full-card-title">전체 여행 일정 개요</div>
+    </div>
+    <div class="full-card-body">
+      <table class="data-table">
+        <thead>
+          <tr><th>날짜</th><th style="text-align:left">일정</th><th>숙박</th><th>비고</th></tr>
+        </thead>
+        <tbody>
+          <tr><td style="font-family:var(--mono)">7/13 (일)</td><td>인천 → 바르셀로나 (직항 13시간)</td><td>바르셀로나 호텔</td><td><span class="tag tag-red">항공권 예약 필수</span></td></tr>
+          <tr class="highlight-row"><td style="font-family:var(--mono)">7/14 (월)</td><td>바르셀로나 — 사그라다 파밀리아, 구엘 공원</td><td>바르셀로나 호텔</td><td><span class="tag tag-amber">티켓 사전예약 필수</span></td></tr>
+          <tr><td style="font-family:var(--mono)">7/15 (화)</td><td>바르셀로나 — 카사 밀라, 카사 바트요, 고딕 지구</td><td>바르셀로나 호텔</td><td><span class="tag tag-amber">티켓 사전예약</span></td></tr>
+          <tr class="highlight-row"><td style="font-family:var(--mono)">7/16 (수)</td><td>바르셀로나 — 몬세라트 당일치기 or 자유 시간</td><td>바르셀로나 호텔</td><td></td></tr>
+          <tr><td style="font-family:var(--mono)">7/17 (목)</td><td>바르셀로나 → 마요르카 (국내선 1시간)</td><td>마요르카 호텔</td><td><span class="tag tag-red">국내선 예약 필수</span></td></tr>
+          <tr class="highlight-row"><td style="font-family:var(--mono)">7/18~22</td><td>마요르카 — 렌트카로 자유 여행</td><td>마요르카 호텔</td><td><span class="tag tag-blue">오토 렌트카 필수</span></td></tr>
+          <tr><td style="font-family:var(--mono)">7/23 (목)</td><td>마요르카 → 바르셀로나 (국내선)</td><td>바르셀로나 호텔 1박</td><td><span class="tag tag-red">귀국편 연계</span></td></tr>
+          <tr class="highlight-row"><td style="font-family:var(--mono)">7/24 (금)</td><td>바르셀로나 → 인천 (귀국)</td><td>기내</td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 항공 + 비용 -->
+  <div class="todo-grid">
+    <div class="full-card">
+      <div class="full-card-head">
+        <span>🛫</span>
+        <div class="full-card-title">항공권 가격 가이드</div>
+      </div>
+      <div class="full-card-body">
+        <table class="data-table">
+          <thead><tr><th>구간</th><th>항공사</th><th>1인 예상가</th><th>2인 합산</th></tr></thead>
+          <tbody>
+            <tr class="highlight-row">
+              <td>인천 → 바르셀로나 왕복</td>
+              <td>대한항공·아시아나 (직항)</td>
+              <td style="color:var(--red)"><strong>140~200만원</strong></td>
+              <td style="color:var(--red)"><strong>280~400만원</strong></td>
+            </tr>
+            <tr>
+              <td>인천 → 바르셀로나 왕복</td>
+              <td>루프트한자·에미레이츠 (1회 경유)</td>
+              <td>70~100만원</td>
+              <td>140~200만원</td>
+            </tr>
+            <tr class="highlight-row">
+              <td>바르셀로나 ↔ 마요르카</td>
+              <td>Vueling·Iberia·Ryanair (왕복)</td>
+              <td>5~15만원</td>
+              <td><strong>10~30만원</strong></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td>항공 합계 (직항 기준)</td>
+              <td></td>
+              <td></td>
+              <td style="color:var(--red)"><strong>290~430만원</strong></td>
+            </tr>
+          </tfoot>
+        </table>
+        <div class="info-box warn" style="margin-top:10px;">
+          ⚠️ 7월은 극성수기. <strong>지금 바로 예약</strong>하지 않으면 좌석 없거나 가격 급등. 대한항공 직항 ICN→BCN은 월/수/금/토 운항. 바르셀로나-마요르카는 Vueling 기준 Klook·스카이스캐너에서 비교 예약.
+        </div>
+      </div>
+    </div>
+
+    <div class="full-card">
+      <div class="full-card-head">
+        <span>🚗</span>
+        <div class="full-card-title">마요르카 렌트카 (오토, 7일)</div>
+      </div>
+      <div class="full-card-body">
+        <table class="data-table">
+          <thead><tr><th>업체</th><th>차종</th><th>일일 요금</th><th>7일 합산</th></tr></thead>
+          <tbody>
+            <tr class="highlight-row">
+              <td><strong>Centauro</strong><br><span style="font-size:11px;color:var(--muted)">★추천 (보험 명확)</span></td>
+              <td>VW 폴로 / 오펠 오메가 (오토)</td>
+              <td>€35~50 / 약 5~8만원</td>
+              <td style="color:var(--blue)"><strong>35~55만원</strong></td>
+            </tr>
+            <tr>
+              <td><strong>WIBER</strong><br><span style="font-size:11px;color:var(--muted)">가성비</span></td>
+              <td>오펠 인시그니아 / 씨트로엥 (오토)</td>
+              <td>€40~60 / 약 6~9만원</td>
+              <td>42~63만원</td>
+            </tr>
+            <tr class="highlight-row">
+              <td><strong>Clickrent</strong><br><span style="font-size:11px;color:var(--muted)">공항 셔틀</span></td>
+              <td>VW 티크로스 / 폴로 (오토)</td>
+              <td>€30~55 / 약 4.5~8만원</td>
+              <td>31~56만원</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr><td>렌트카 합계 예상</td><td></td><td></td><td style="color:var(--red)"><strong>약 40~65만원</strong></td></tr>
+          </tfoot>
+        </table>
+        <div class="info-box tip" style="margin-top:10px;">
+          💡 예약처: roadgenius.com, klook.com, kayak.co.kr 비교. <strong>성수기 자동변속기는 지금 바로 예약 필수!</strong> Centauro는 공항 내 카운터라 셔틀 불필요.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 호텔 추천 -->
+  <div class="full-card" style="margin-top:16px; margin-bottom:16px;">
+    <div class="full-card-head">
+      <span>🏨</span>
+      <div class="full-card-title">숙박 추천 리스트 — 박당 평균 30만원 이내 기준</div>
+    </div>
+    <div class="full-card-body">
+      <div style="font-size:12px;color:var(--muted);margin-bottom:12px;">바르셀로나 4박 + 마요르카 7박 + 귀국 전날 1박 = 총 12박. 평균 30만원 기준 총 360만원 예산.</div>
+      <div style="font-weight:700;font-size:12px;color:var(--gold);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.08em;">바르셀로나 (7/13~7/17, 4박)</div>
+      <div class="hotel-grid" style="margin-bottom:16px;">
+        <div class="hotel-card">
+          <div class="hotel-name">Hotel Arts Barcelona ★★★★★</div>
+          <div class="hotel-area">📍 바르셀로네타 (해변 인근)</div>
+          <div class="hotel-detail">람블라스, 고딕 지구 접근 편리. 해변 전망. 부티크급 인테리어.</div>
+          <div class="hotel-price">약 35~50만원/박</div>
+        </div>
+        <div class="hotel-card">
+          <div class="hotel-name">Iberostar Paseo de Gracia ★★★★</div>
+          <div class="hotel-area">📍 그라시아 거리 (가우디 밀집)</div>
+          <div class="hotel-detail">카사 밀라·카사 바트요 도보 5분. 교통 편리. 신혼 추천.</div>
+          <div class="hotel-price" style="color:var(--green)">약 20~30만원/박 ★예산 적합</div>
+        </div>
+        <div class="hotel-card">
+          <div class="hotel-name">H10 Cubik ★★★★</div>
+          <div class="hotel-area">📍 보른 지구 (구시가)</div>
+          <div class="hotel-detail">피카소 미술관, 고딕 지구 도보권. 모던한 디자인 호텔.</div>
+          <div class="hotel-price" style="color:var(--green)">약 18~28만원/박 ★예산 적합</div>
+        </div>
+        <div class="hotel-card">
+          <div class="hotel-name">Meliá Barcelona Sarrià ★★★★</div>
+          <div class="hotel-area">📍 사리아 (주거지역, 조용)</div>
+          <div class="hotel-detail">관광지와 약간 거리 있으나 저렴하고 고급스러움. 지하철 접근 편리.</div>
+          <div class="hotel-price" style="color:var(--green)">약 15~25만원/박 ★예산 적합</div>
+        </div>
+      </div>
+
+      <div style="font-weight:700;font-size:12px;color:var(--gold);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.08em;">마요르카 (7/17~7/23, 7박)</div>
+      <div class="hotel-grid">
+        <div class="hotel-card">
+          <div class="hotel-name">Hotel Nixe Palace ★★★★★</div>
+          <div class="hotel-area">📍 팔마 (수도, 렌트카 출발)</div>
+          <div class="hotel-detail">팔마 해변 인근. 고급스러운 지중해 뷰. 신혼여행 인기 호텔.</div>
+          <div class="hotel-price">약 35~55만원/박</div>
+        </div>
+        <div class="hotel-card">
+          <div class="hotel-name">Hospes Maricel ★★★★★</div>
+          <div class="hotel-area">📍 팔마 카스 카탈라</div>
+          <div class="hotel-detail">바다 전망 절경. 수영장 포함. 신혼 커플 최고 인기.</div>
+          <div class="hotel-price">약 40~60만원/박</div>
+        </div>
+        <div class="hotel-card">
+          <div class="hotel-name">Hotel Zafiro Palace Alcudia ★★★★</div>
+          <div class="hotel-area">📍 알쿠디아 (북부 해변)</div>
+          <div class="hotel-detail">올인클루시브 옵션. 예쁜 모래해변. 가성비 좋은 리조트.</div>
+          <div class="hotel-price" style="color:var(--green)">약 18~30만원/박 ★예산 적합</div>
+        </div>
+        <div class="hotel-card">
+          <div class="hotel-name">Hipotels Playa de Palma ★★★★</div>
+          <div class="hotel-area">📍 팔마 데 마요르카 공항 인근</div>
+          <div class="hotel-detail">공항 접근 편리. 아레날 해변 위치. 렌트카 반납 후 편리.</div>
+          <div class="hotel-price" style="color:var(--green)">약 15~25만원/박 ★예산 적합</div>
+        </div>
+      </div>
+      <div class="info-box info" style="margin-top:12px;">
+        📌 <strong>예약처:</strong> Booking.com, Expedia, Hotels.com 비교. 7월 성수기는 최소 3개월 전 예약 권장. 현재 기준 <strong>지금 바로 예약해야 합니다</strong>. 무료 취소 조건 확인 후 일단 예약 후 변경 가능.
+      </div>
+    </div>
+  </div>
+
+  <!-- 여행 todo -->
+  <div class="todo-grid">
+    <div class="todo-card">
+      <div class="todo-card-head" style="background:#eef3fb;">
+        <span class="todo-icon">🎟️</span>
+        <div class="todo-card-title">티켓·예약 체크리스트</div>
+        <span class="tag tag-red" style="margin-left:auto;">지금 즉시</span>
+      </div>
+      <div class="todo-card-body">
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">인천 → 바르셀로나 왕복 항공권 예약
+            <span class="sub">대한항공(koreanair.com) or 스카이스캐너 비교. 7월 성수기 지금이 마지막!</span>
+          </div>
+          <span class="todo-deadline urgent">즉시</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">바르셀로나 ↔ 마요르카 왕복 국내선
+            <span class="sub">Vueling (vueling.com) or Klook. 7/17 BCN→PMI, 7/23 PMI→BCN</span>
+          </div>
+          <span class="todo-deadline urgent">즉시</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">바르셀로나 숙박 예약 (4~5박)
+            <span class="sub">Iberostar Paseo de Gracia or H10 Cubik 권장. booking.com</span>
+          </div>
+          <span class="todo-deadline urgent">즉시</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">마요르카 숙박 예약 (7박)
+            <span class="sub">Zafiro Palace Alcudia or Hipotels 계열. 예산 내 적합</span>
+          </div>
+          <span class="todo-deadline urgent">즉시</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">마요르카 렌트카 예약 (오토 7일)
+            <span class="sub">Centauro(공항 내) or Clickrent. roadgenius.com / klook.com</span>
+          </div>
+          <span class="todo-deadline urgent">즉시</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">사그라다 파밀리아 입장권 예약
+            <span class="sub">sagradafamilia.org 공식. 7월은 2~3개월 전 매진. 타워 투어 포함 시 €26~36/인</span>
+          </div>
+          <span class="todo-deadline urgent">즉시</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">구엘 공원 (유료 구역) 입장권 예약
+            <span class="sub">parkguell.barcelona. 시간대 선택 입장. €10/인. 사전 예약 필수</span>
+          </div>
+          <span class="todo-deadline urgent">즉시</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">카사 밀라 (라 페드레라) 예약
+            <span class="sub">lapedrera.com. 야간 투어 신혼 추천. €25~35/인</span>
+          </div>
+          <span class="todo-deadline active">5월 내</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">여행자 보험 가입 (2인)
+            <span class="sub">출발 전 가입. 삼성화재·KB손보·하나손보. 2인 12일 약 6~10만원</span>
+          </div>
+          <span class="todo-deadline active">출발 전</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">국제운전면허증 발급 (2인)
+            <span class="sub">가까운 경찰서 or 도로교통공단. 1~3일 소요. 약 8,500원/인</span>
+          </div>
+          <span class="todo-deadline active">6월 내</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="full-card">
+      <div class="full-card-head">
+        <span>💰</span>
+        <div class="full-card-title">신혼여행 예상 총 비용 (2인)</div>
+      </div>
+      <div class="full-card-body">
+        <table class="data-table">
+          <thead><tr><th>항목</th><th>경제형</th><th>표준형</th></tr></thead>
+          <tbody>
+            <tr><td>인천↔바르셀로나 왕복항공 (2인)</td><td>140~200만</td><td style="color:var(--red)">280~400만</td></tr>
+            <tr class="highlight-row"><td>바르셀로나 숙박 (4박×2인)</td><td>60~80만</td><td>80~120만</td></tr>
+            <tr><td>마요르카 숙박 (7박×2인)</td><td>105~175만</td><td>175~280만</td></tr>
+            <tr class="highlight-row"><td>BCN↔PMI 국내선 (왕복, 2인)</td><td>10~20만</td><td>20~30만</td></tr>
+            <tr><td>마요르카 렌트카 (7일)</td><td>35~45만</td><td>50~65만</td></tr>
+            <tr class="highlight-row"><td>관광지 티켓 (사그라다·구엘·카사밀라 등)</td><td>15~20만</td><td>20~30만</td></tr>
+            <tr><td>식비·교통·기타</td><td>50~80만</td><td>100~150만</td></tr>
+          </tbody>
+          <tfoot>
+            <tr><td><strong>합계 (2인)</strong></td><td><strong>415~620만원</strong></td><td style="color:var(--red)"><strong>725~1,075만원</strong></td></tr>
+          </tfoot>
+        </table>
+        <div class="info-box ok" style="margin-top:10px;">
+          ✅ <strong>7월 결혼식 전 예산 고려:</strong> 경유 항공(140~200만) + 예산 숙박(165~255만) 조합으로 총 약 500~700만원 내 조정 가능. 6월 말 잔여 현금 3,144만원에서 충당 가능.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== SECTION 5: MOVING ===== -->
+<div class="section page-section" id="moving">
+  <div class="section-header">
+    <span class="section-num">05</span>
+    <h2 class="section-title">이사 계획</h2>
+    <span class="section-badge badge-urgent">4/17 D-9</span>
+  </div>
+
+  <div class="todo-grid">
+    <div class="todo-card">
+      <div class="todo-card-head" style="background:#fdf0f0;">
+        <span class="todo-icon">📦</span>
+        <div class="todo-card-title">1차 이사 — 4월 17일 (D-9)</div>
+        <span class="tag tag-red">470만원</span>
+      </div>
+      <div class="todo-card-body">
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">이사업체 예약 확정 확인
+            <span class="sub">이사비 260만원. 4/17 날짜 확정 여부 재확인.</span>
+          </div>
+          <span class="todo-deadline urgent">즉시</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">단기임대 입주 계약 확인
+            <span class="sub">단기임대 210만원. 계약서·입주일·퇴거일 확인.</span>
+          </div>
+          <span class="todo-deadline urgent">즉시</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">짐 정리 및 포장 시작
+            <span class="sub">인테리어 공사 중 보관 불필요 짐 미리 정리.</span>
+          </div>
+          <span class="todo-deadline urgent">4/14~16</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">우편·주소 변경 처리
+            <span class="sub">우체국 주소 변경. 각종 청구서·구독 서비스 주소 업데이트.</span>
+          </div>
+          <span class="todo-deadline active">4/17 전후</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="todo-card">
+      <div class="todo-card-head" style="background:#eef3fb;">
+        <span class="todo-icon">🏠</span>
+        <div class="todo-card-title">2차 이사 — 인테리어 완료 후 신혼집 입주</div>
+        <span class="tag tag-blue">6월 말~7월 초</span>
+      </div>
+      <div class="todo-card-body">
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">인테리어 공사 완료 예정일 확인
+            <span class="sub">공사 일정에 따라 입주 날짜 확정. 업체와 5월 중 재확인.</span>
+          </div>
+          <span class="todo-deadline active">5월 중</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">신혼집 입주 날짜 확정 후 2차 이사업체 예약
+            <span class="sub">공사 완료 후 하자 점검 → 가전·가구 반입 일정 조율.</span>
+          </div>
+          <span class="todo-deadline active">6월 초</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">가전·가구 배송 날짜 이사일에 맞춰 예약
+            <span class="sub">냉장고·침대·소파 등 대형 가전 배송일 = 이사일로 통일.</span>
+          </div>
+          <span class="todo-deadline active">6월 초</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">인테리어 하자 점검 및 잔금 납부
+            <span class="sub">공사 완료 후 꼼꼼히 하자 점검. 문제 없으면 잔금 800만원 납부.</span>
+          </div>
+          <span class="todo-deadline active">6월 말</span>
+        </div>
+        <div class="todo-item" onclick="toggle(this)">
+          <div class="todo-check"></div>
+          <div class="todo-text">전입신고 (이사 후 14일 이내)
+            <span class="sub">정부24(gov.kr) 온라인 신청 or 주민센터 방문.</span>
+          </div>
+          <span class="todo-deadline">입주 후 즉시</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== SECTION 6: FINANCE ===== -->
+<div class="section page-section" id="finance">
+  <div class="section-header">
+    <span class="section-num">06</span>
+    <h2 class="section-title">자금 계획 타임라인</h2>
+    <span class="section-badge badge-ok">종합 현황</span>
+  </div>
+
+  <!-- 현재 자산 -->
+  <div class="full-card" style="margin-bottom:16px;">
+    <div class="full-card-head">
+      <span>💳</span>
+      <div class="full-card-title">현재 자산 현황 (4/8 기준)</div>
+    </div>
+    <div class="full-card-body">
+      <table class="data-table">
+        <thead><tr><th>항목</th><th>금액/수량</th><th>평가금 (원화)</th><th>상태</th></tr></thead>
+        <tbody>
+          <tr class="highlight-row"><td><strong>원화 현금</strong></td><td>—</td><td style="color:var(--green)"><strong>55,970,212원</strong></td><td><span class="tag tag-green">확보 완료</span></td></tr>
+          <tr><td><strong>달러 현금</strong></td><td>$10,759.89</td><td style="color:var(--amber)"><strong>약 16,140,000원</strong></td><td><span class="tag tag-amber">환전 필요 ★즉시</span></td></tr>
+          <tr class="highlight-row"><td><strong>팔란티어</strong></td><td>92.32주 (+14.5%)</td><td style="color:var(--blue)">21,492,847원</td><td><span class="tag tag-blue">보유 (5/11 실적 후)</span></td></tr>
+          <tr><td><strong>AMD</strong></td><td>45.61주 (+43.3%)</td><td style="color:var(--blue)">15,801,449원</td><td><span class="tag tag-amber">일부 매도 예정</span></td></tr>
+          <tr class="highlight-row"><td><strong>SPY</strong></td><td>17.43주 (+37.3%)</td><td style="color:var(--blue)">17,669,568원</td><td><span class="tag tag-amber">매도 예정</span></td></tr>
+        </tbody>
+        <tfoot>
+          <tr><td><strong>총 가용자산</strong></td><td></td><td style="color:var(--red)"><strong>약 1억 2,707만원</strong></td><td></td></tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+
+  <!-- 월별 현금흐름 -->
+  <div style="margin-bottom:16px;">
+    <div style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:12px;">월별 현금흐름 (4월~7월)</div>
+    <div class="month-grid">
+      <div class="month-card">
+        <div class="month-head danger"><span>4월</span><span style="font-size:10px;">잔금 D-day</span></div>
+        <div class="month-body">
+          <div class="month-row inc"><span class="lbl">원화 현금</span><span>+5,597만</span></div>
+          <div class="month-row stk"><span class="lbl">달러 환전 즉시</span><span>+1,614만</span></div>
+          <div class="month-row stk"><span class="lbl">SPY 1주 매도</span><span>+102만</span></div>
+          <div class="month-row inc"><span class="lbl">4/25 월급</span><span>+869만</span></div>
+          <div class="month-row exp"><span class="lbl">4/17 이사+임대</span><span>−470만</span></div>
+          <div class="month-row exp"><span class="lbl">4/24 잔금</span><span>−7,323만</span></div>
+          <div class="month-row exp"><span class="lbl">4/27 인테리어①</span><span>−800만</span></div>
+          <div class="month-row exp"><span class="lbl">생활비</span><span>−130만</span></div>
+          <div class="month-row bal neg"><span>4월 말 잔고</span><span>약 −541만</span></div>
+        </div>
+      </div>
+      <div class="month-card">
+        <div class="month-head warn"><span>5월</span><span style="font-size:10px;">인테리어+가전가구</span></div>
+        <div class="month-body">
+          <div class="month-row stk"><span class="lbl">SPY 16.4주 전량</span><span>+1,667만</span></div>
+          <div class="month-row stk"><span class="lbl">AMD 40주 매도</span><span>+1,385만</span></div>
+          <div class="month-row inc"><span class="lbl">5/25 월급</span><span>+869만</span></div>
+          <div class="month-row exp"><span class="lbl">인테리어②~⑤</span><span>−3,000만</span></div>
+          <div class="month-row exp"><span class="lbl">가전 본인부담</span><span>−285만</span></div>
+          <div class="month-row exp"><span class="lbl">소파+식탁</span><span>−315만</span></div>
+          <div class="month-row exp"><span class="lbl">생활비</span><span>−250만</span></div>
+          <div class="month-row bal neg"><span>5월 말 잔고</span><span>약 +530만</span></div>
+        </div>
+      </div>
+      <div class="month-card">
+        <div class="month-head ok"><span>6월</span><span style="font-size:10px;">회사대출 투입</span></div>
+        <div class="month-body">
+          <div class="month-row inc"><span class="lbl">이월 잔고</span><span>+530만</span></div>
+          <div class="month-row inc"><span class="lbl">회사 주택대출</span><span>+5,000만</span></div>
+          <div class="month-row inc"><span class="lbl">6/25 월급</span><span>+869만</span></div>
+          <div class="month-row exp"><span class="lbl">취득세 납부</span><span>−2,025만</span></div>
+          <div class="month-row exp"><span class="lbl">인테리어 잔금</span><span>−800만</span></div>
+          <div class="month-row exp"><span class="lbl">침대+매트리스</span><span>−255만</span></div>
+          <div class="month-row exp"><span class="lbl">생활비</span><span>−250만</span></div>
+          <div class="month-row bal pos"><span>6월 말 잔고</span><span>약 +3,069만</span></div>
+        </div>
+      </div>
+      <div class="month-card">
+        <div class="month-head info"><span>7월</span><span style="font-size:10px;">결혼식+신혼여행</span></div>
+        <div class="month-body">
+          <div class="month-row inc"><span class="lbl">이월 잔고</span><span>+3,069만</span></div>
+          <div class="month-row inc"><span class="lbl">7/25 월급</span><span>+869만</span></div>
+          <div class="month-row inc"><span class="lbl">축의금 수입</span><span>+α</span></div>
+          <div class="month-row stk"><span class="lbl">PLTR 일부 매도</span><span>+α</span></div>
+          <div class="month-row exp"><span class="lbl">신혼여행 (12일)</span><span>−600~850만</span></div>
+          <div class="month-row exp"><span class="lbl">생활비</span><span>−250만</span></div>
+          <div class="month-row bal pos"><span>7월 말 잔고</span><span>약 3,000만+α</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 총 비용 현황표 -->
+  <div class="full-card">
+    <div class="full-card-head">
+      <span>📊</span>
+      <div class="full-card-title">전체 지출 항목 종합 (4월 ~ 7월)</div>
+    </div>
+    <div class="full-card-body">
+      <table class="data-table">
+        <thead><tr><th>시기</th><th>항목</th><th>금액</th><th>구분</th><th>재원</th></tr></thead>
+        <tbody>
+          <tr><td>4/17</td><td>이사비 + 단기임대</td><td class="red">470만원</td><td><span class="tag tag-red">이사</span></td><td>원화 현금</td></tr>
+          <tr class="highlight-row"><td>4/24</td><td>잔금 본인부담 + 중개 + 법무</td><td style="color:var(--red)"><strong>7,323만원</strong></td><td><span class="tag tag-red">잔금</span></td><td>현금 + 환전 + SPY 1주</td></tr>
+          <tr><td>4/27</td><td>인테리어 1차</td><td class="red">800만원</td><td><span class="tag tag-amber">인테리어</span></td><td>4/25 월급</td></tr>
+          <tr class="highlight-row"><td>5/4~5/22</td><td>인테리어 2~5차</td><td style="color:var(--red)"><strong>3,000만원</strong></td><td><span class="tag tag-amber">인테리어</span></td><td>SPY + AMD 매도</td></tr>
+          <tr><td>5월 중</td><td>가전 본인부담 (4종)</td><td class="red">230~320만원</td><td><span class="tag tag-amber">가전</span></td><td>AMD 매도</td></tr>
+          <tr class="highlight-row"><td>5월 중</td><td>소파 + 식탁 세트</td><td class="red">300~330만원</td><td><span class="tag tag-amber">가구</span></td><td>AMD 매도</td></tr>
+          <tr><td>5월 중</td><td>욕실 도기 (화장실 개소×비용)</td><td class="red">250~400만원</td><td><span class="tag tag-amber">인테리어</span></td><td>AMD/PLTR 매도</td></tr>
+          <tr class="highlight-row"><td>6월 중</td><td>취득세 납부 (전용 84㎡)</td><td style="color:var(--red)"><strong>2,025만원</strong></td><td><span class="tag tag-red">세금</span></td><td>회사대출 5,000만</td></tr>
+          <tr><td>6월 말</td><td>인테리어 잔금</td><td class="red">800만원</td><td><span class="tag tag-amber">인테리어</span></td><td>회사대출</td></tr>
+          <tr class="highlight-row"><td>6월 중</td><td>침대 프레임 + 매트리스</td><td class="red">180~330만원</td><td><span class="tag tag-amber">가구</span></td><td>PLTR 매도 or 회사대출</td></tr>
+          <tr><td>7/13~7/24</td><td>신혼여행 (항공+숙박+렌트카+활동)</td><td style="color:var(--red)"><strong>600~850만원</strong></td><td><span class="tag tag-blue">여행</span></td><td>6월 잔여 현금</td></tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2"><strong>총 지출 합계</strong></td>
+            <td style="color:var(--red)"><strong>약 1억 5,978~1억 7,348만원</strong></td>
+            <td colspan="2"></td>
+          </tr>
+          <tr>
+            <td colspan="2"><strong>총 수입 합계 (현금+주식+대출+월급)</strong></td>
+            <td style="color:var(--green)"><strong>약 1억 6,500만원 이상</strong></td>
+            <td colspan="2">△ 여유있음</td>
+          </tr>
+        </tfoot>
+      </table>
+      <div class="info-box ok" style="margin-top:12px;">
+        ✅ <strong>결론:</strong> 달러 환전 + SPY 전량 + AMD 40주 매도로 4~5월 커버. 6월 회사대출 5,000만원으로 취득세+인테리어 잔금 완전 해결. 팔란티어는 5/11 실적 발표 후 필요시 매도. 7월 신혼여행은 6월 말 잔고 약 3,069만원에서 충당 가능.
+      </div>
+    </div>
+  </div>
+
+  <!-- 주식 매도 계획 -->
+  <div class="full-card" style="margin-top:16px;">
+    <div class="full-card-head">
+      <span>📈</span>
+      <div class="full-card-title">남은 주식 매도 실행 계획</div>
+    </div>
+    <div class="full-card-body">
+      <table class="data-table">
+        <thead><tr><th>종목</th><th>현재 평가금</th><th>매도 계획</th><th>예상 확보액</th><th>실행 시기</th><th>용도</th></tr></thead>
+        <tbody>
+          <tr class="highlight-row">
+            <td><strong>달러 $10,760</strong></td>
+            <td>—</td>
+            <td>전액 환전</td>
+            <td style="color:var(--green)"><strong>+1,614만</strong></td>
+            <td><span class="tag tag-red">오늘 즉시 ★</span></td>
+            <td>잔금 보완</td>
+          </tr>
+          <tr>
+            <td><strong>SPY (1주)</strong></td>
+            <td>17.43주 / 1,767만</td>
+            <td>1주만 매도</td>
+            <td style="color:var(--green)">+102만</td>
+            <td><span class="tag tag-red">4/14~4/17</span></td>
+            <td>잔금 부족분</td>
+          </tr>
+          <tr class="highlight-row">
+            <td><strong>SPY (잔여 16.4주)</strong></td>
+            <td>16.4주 / 1,666만</td>
+            <td>전량 매도</td>
+            <td style="color:var(--green)"><strong>+1,667만</strong></td>
+            <td><span class="tag tag-amber">4/28~5/1</span></td>
+            <td>5월 인테리어</td>
+          </tr>
+          <tr>
+            <td><strong>AMD (약 40주)</strong></td>
+            <td>45.61주 / 1,580만</td>
+            <td>40주 매도, 5.6주 유지</td>
+            <td style="color:var(--green)"><strong>+1,385만</strong></td>
+            <td><span class="tag tag-amber">4/29 실적 전후</span></td>
+            <td>가전·가구</td>
+          </tr>
+          <tr class="highlight-row">
+            <td><strong>팔란티어</strong></td>
+            <td>92.32주 / 2,149만</td>
+            <td>필요시 일부 매도<br><small style="color:var(--muted)">기본 전량 보유</small></td>
+            <td style="color:var(--muted)">최대 +2,149만</td>
+            <td><span class="tag tag-blue">5/11 실적 후</span></td>
+            <td>침대·여행 or 장기보유</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+</div><!-- end container -->
+
+<!-- PRINT BUTTON -->
+<button class="print-btn" onclick="window.print()">🖨️ 인쇄 / PDF 저장</button>
+
+<script>
+// ════════════════════════════════════════════════
+//  ⚙️  JSONBin 설정 (두 값만 교체하면 됩니다)
+//  1. jsonbin.io 무료 가입
+//  2. New Bin 생성 (내용: {})
+//  3. Bin ID / Master Key 복사 후 아래에 붙여넣기
+// ════════════════════════════════════════════════
+const JSONBIN_ID  = '69d73b0236566621a892d929';
+const JSONBIN_KEY = '$2a$10$Xki7Wbyt3zTobrnuPjrYeOLtK7F.fg3QF4HnsFlNJsU7tsly4XeQm';
+
+const API_URL = `https://api.jsonbin.io/v3/b/${JSONBIN_ID}`;
+const HEADERS = {
+  'Content-Type': 'application/json',
+  'X-Master-Key': JSONBIN_KEY,
+  'X-Bin-Versioning': 'false'
+};
+const isConfigured = () =>
+  JSONBIN_ID !== 'REPLACE_WITH_BIN_ID' && JSONBIN_KEY !== 'REPLACE_WITH_MASTER_KEY';
+
+function showSetupBanner() {
+  const b = document.createElement('div');
+  b.id = 'setup-banner';
+  b.style.cssText = `position:fixed;bottom:80px;left:50%;transform:translateX(-50%);
+    background:#1a1814;color:#f7f4ef;border:1.5px solid #c9993a;border-radius:12px;
+    padding:16px 20px;font-size:12px;line-height:1.8;max-width:340px;
+    width:calc(100% - 32px);z-index:300;box-shadow:0 8px 32px rgba(0,0,0,.35);
+    font-family:'Noto Sans KR',sans-serif;`;
+  b.innerHTML = `
+    <div style="font-weight:700;color:#e8c97a;margin-bottom:8px;">⚙️ 공유 체크리스트 설정 필요</div>
+    <div style="color:#ccc;">
+      1. <a href="https://jsonbin.io" target="_blank" style="color:#e8c97a;text-decoration:underline;">jsonbin.io</a> 무료 가입<br>
+      2. New Bin 생성 → 내용 <code style="background:#333;padding:1px 6px;border-radius:3px;">{}</code><br>
+      3. Bin ID · Master Key 복사<br>
+      4. HTML 파일의 REPLACE_WITH_* 부분에 붙여넣기
+    </div>
+    <div style="margin-top:8px;color:#888;font-size:11px;">설정 전에는 이 기기에서만 저장됩니다.</div>
+    <button onclick="this.parentElement.remove()"
+      style="margin-top:10px;background:#c9993a;color:#1a1814;border:none;
+      border-radius:6px;padding:7px 16px;font-size:12px;font-weight:700;cursor:pointer;">닫기</button>`;
+  document.body.appendChild(b);
+}
+
+let _syncEl;
+function showSync(msg, color = '#c9993a') {
+  if (!_syncEl) {
+    _syncEl = document.createElement('div');
+    _syncEl.style.cssText = `position:fixed;top:68px;right:12px;background:#1a1814;
+      color:#f7f4ef;border:1px solid #333;border-radius:8px;padding:7px 13px;
+      font-size:11px;z-index:300;font-family:'DM Mono',monospace;
+      opacity:0;transition:opacity .25s;pointer-events:none;`;
+    document.body.appendChild(_syncEl);
+  }
+  _syncEl.textContent = msg;
+  _syncEl.style.borderColor = color;
+  _syncEl.style.opacity = '1';
+  clearTimeout(_syncEl._t);
+  _syncEl._t = setTimeout(() => { _syncEl.style.opacity = '0'; }, 2200);
+}
+
+function assignIds() {
+  document.querySelectorAll('.todo-item').forEach((el, i) => {
+    if (!el.dataset.id) el.dataset.id = 'todo_' + i;
+  });
+}
+
+function saveLocal(s) { localStorage.setItem('wedding_todos', JSON.stringify(s)); }
+function loadLocal() { const r = localStorage.getItem('wedding_todos'); return r ? JSON.parse(r) : {}; }
+
+function collectState() {
+  const s = {};
+  document.querySelectorAll('.todo-item').forEach(el => { s[el.dataset.id] = el.classList.contains('done'); });
+  return s;
+}
+
+function applyState(state) {
+  document.querySelectorAll('.todo-item').forEach(el => {
+    el.classList.toggle('done', !!state[el.dataset.id]);
+  });
+  updateProgress();
+}
+
+async function loadRemote() {
+  if (!isConfigured()) { applyState(loadLocal()); return; }
+  try {
+    showSync('⟳ 불러오는 중...');
+    const res  = await fetch(API_URL + '/latest', { headers: HEADERS });
+    const json = await res.json();
+    const state = json.record || {};
+    saveLocal(state);
+    applyState(state);
+    showSync('✓ 동기화 완료', '#2d6a2d');
+  } catch {
+    applyState(loadLocal());
+    showSync('⚠ 오프라인', '#854f0b');
+  }
+}
+
+let _saveTimer;
+function saveRemote() {
+  const state = collectState();
+  saveLocal(state);
+  clearTimeout(_saveTimer);
+  _saveTimer = setTimeout(async () => {
+    if (!isConfigured()) return;
+    try {
+      showSync('↑ 저장 중...');
+      await fetch(API_URL, { method: 'PUT', headers: HEADERS, body: JSON.stringify(state) });
+      showSync('✓ 저장됨', '#2d6a2d');
+    } catch {
+      showSync('⚠ 저장 실패', '#854f0b');
+    }
+  }, 600);
+}
+
+// ── 체크 토글 ──
+function toggle(el) {
+  el.classList.toggle('done');
+  updateProgress();
+  saveRemote();
+}
+
+// ── 진행률 바 ──
+function updateProgress() {
+  document.querySelectorAll('.todo-card').forEach(card => {
+    const items = card.querySelectorAll('.todo-item');
+    const done = card.querySelectorAll('.todo-item.done').length;
+    const pct = items.length ? Math.round(done / items.length * 100) : 0;
+    let wrapper = card.querySelector('.progress-container');
+    if (!wrapper) {
+      wrapper = document.createElement('div');
+      wrapper.className = 'progress-container';
+      wrapper.innerHTML = `<div style="display:flex;align-items:center;gap:8px;padding:6px 18px 0;">
+        <div class="progress-bar" style="flex:1"><div class="progress-fill" style="width:0%"></div></div>
+        <span class="progress-label" style="font-size:10px;color:var(--muted);white-space:nowrap;font-family:var(--mono)">0%</span>
+      </div>`;
+      card.querySelector('.todo-card-head').after(wrapper);
+    }
+    const fill = wrapper.querySelector('.progress-fill');
+    const label = wrapper.querySelector('.progress-label');
+    fill.style.width = pct + '%';
+    fill.style.background = pct === 100 ? 'var(--green)' : pct > 50 ? 'var(--gold)' : 'var(--red)';
+    if (label) label.textContent = done + '/' + items.length;
+  });
+}
+
+// ── 네비게이션 ──
+function scrollToSection(id) {
+  const headerH = document.querySelector('.site-header').offsetHeight;
+  const el = document.getElementById(id);
+  if (!el) return;
+  const top = el.getBoundingClientRect().top + window.scrollY - headerH - 12;
+  window.scrollTo({ top, behavior: 'smooth' });
+  setActiveTab(id);
+}
+
+function setActiveTab(id) {
+  const sections = ['overview','interior','appliances','honeymoon','moving','finance'];
+  document.querySelectorAll('.nav-tab').forEach((t, i) => {
+    t.classList.toggle('active', sections[i] === id);
+  });
+}
+
+window.addEventListener('scroll', () => {
+  const sections = ['overview','interior','appliances','honeymoon','moving','finance'];
+  let current = sections[0];
+  const headerH = document.querySelector('.site-header').offsetHeight + 20;
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el && window.scrollY >= el.offsetTop - headerH) current = id;
+  });
+  setActiveTab(current);
+}, { passive: true });
+
+// ── 탭 전환 시 재동기화 ──
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible' && isConfigured()) loadRemote();
+});
+
+// ── 초기화 ──
+assignIds();
+if (!isConfigured()) showSetupBanner();
+loadRemote();
+</script>
+</body>
+</html>
